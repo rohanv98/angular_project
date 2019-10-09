@@ -1,0 +1,67 @@
+h1 {
+  text-align: center;
+}
+.inside-content {
+  border: 1px solid black;
+  padding: 30px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding-top: 5px;
+  margin-right: 5px;
+}
+.rmnd-me {
+  margin-top: 10px;
+}
+.l-btn {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.lg-btn {
+  padding: 5px 20px;
+  background: gold;
+  color: black;
+}
+.down-form {
+  background: grey;
+  padding: 20px;
+  display: flex;
+  margin-top: 20px;
+}
+.fg-psw {
+  /* background: red;
+    color: black;
+    padding: 10px;
+    border-radius: 10px; */
+  width: 20%;
+}
+
+.rg-nw {
+  /* background: red;
+    color: black;
+    padding: 10px;
+    border-radius: 10px; */
+  width: 80%;
+  margin-top: 5px;
+}
+
+.rg-nw a {
+  background: red;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: white;
+}
+.mistake {
+  color: red;
+
+  display: inline;
+  margin-top: 3px;
+}

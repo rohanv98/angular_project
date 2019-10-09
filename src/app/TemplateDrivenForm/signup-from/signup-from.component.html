@@ -1,0 +1,97 @@
+<form
+  class="container"
+  [formGroup]="mygroup"
+  (ngSubmit)="handlesubmit(mygroup)"
+>
+  <div class="lg-form">
+    <h1>SingUp Form</h1>
+  </div>
+  <div class="inside-content">
+    <label><h4>User name:</h4></label>
+    <input
+      type="text"
+      maxlength="15"
+      placeholder="Enter user name"
+      formControlName="uname"
+    />
+
+    <div
+      *ngIf="mygroup.controls.uname.touched && mygroup.controls.uname.invalid"
+    >
+      <div *ngIf="mygroup.controls['uname'].errors?.required">
+        User name is required
+      </div>
+      <div *ngIf="mygroup.controls['uname'].hasError('minlength')">
+        username must within 4 to 15 characters
+      </div>
+      <div *ngIf="mygroup.controls['uname'].hasError('maxlength')">
+        username must within 4 to 15 characters
+      </div>
+    </div>
+
+    <label><h4>Email-id:</h4></label>
+    <input
+      type="email"
+      placeholder="Enter your mail-id"
+      formControlName="uemail"
+    />
+
+    <div
+      *ngIf="mygroup.controls.uemail.touched && mygroup.controls.uemail.invalid"
+    >
+      <div *ngIf="mygroup.controls['uemail'].errors?.required">
+        Give your Email-id
+      </div>
+      <div *ngIf="mygroup.controls['uemail'].hasError('email')">
+        Enter your valid Email-id
+      </div>
+    </div>
+
+    <label><h4>Create Password:</h4></label>
+    <input
+      type="password"
+      placeholder="Enter your password"
+      formControlName="upassword"
+    />
+    <div
+      *ngIf="
+        mygroup.controls.upassword.touched && mygroup.controls.upassword.invalid
+      "
+    >
+      <div *ngIf="mygroup.controls['upassword'].errors?.required">
+        Password is required
+      </div>
+      <div *ngIf="mygroup.controls['upassword'].hasError['minlength']">
+        password must be atleast 6 characters
+      </div>
+    </div>
+    <label><h4>Confirm Password:</h4></label>
+    <input
+      type="password"
+      placeholder="Enter same password"
+      formControlName="cpassword"
+    />
+    <div *ngIf="mygroup.touched && mygroup.errors?.mismatch">
+      Password and confirm password mismatched
+    </div>
+    <div class="rmnd-me">
+      <input type="checkbox" name="remember" />
+      Remember me
+    </div>
+    <div class="l-btn">
+      <button class="lg-btn" type="submit">SignUp</button>
+    </div>
+    <div class="l-btn">
+      <button class="lg-btn" type="button" (click)="update()">Load</button>
+    </div>
+    <div class="down-form">
+      <div class="rg-nw">
+        Already you have account? <a routerLink="/login-page">Login </a>
+      </div>
+      <div class="fg-psw">
+        By creating an account you agree to our
+        <a href="/">Terms and conditions</a>
+      </div>
+    </div>
+  </div>
+</form>

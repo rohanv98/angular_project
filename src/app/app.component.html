@@ -1,0 +1,26 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a
+      class="nav-link "
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      routerLink="/"
+      >Login Page</a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" routerLink="/singuppage"
+      >SignUp Page</a
+    >
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" routerLink="/product">Cart</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+
+<!-- <app-login-from></app-login-from>
+<hr />
+<app-signup-from></app-signup-from> -->
+<!-- <app-registration-from></app-registration-from> -->

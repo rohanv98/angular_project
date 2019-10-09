@@ -1,0 +1,61 @@
+<form #login="ngForm" (ngSubmit)="submit(login)">
+  <div class="lg-form">
+    <h1>Login Form</h1>
+  </div>
+  <div class="inside-content">
+    <label>
+      <h4>
+        User name:
+        <!-- <h5>Hai {{ value }}</h5> -->
+      </h4></label
+    >
+    <input
+      type="text"
+      placeholder="Enter user name"
+      ngModel
+      name="uname"
+      #username="ngModel"
+      required
+      minlength="3"
+      maxlength="10"
+    />
+
+    <div *ngIf="username.touched && !username.valid">
+      <div class="mistake" *ngIf="username.errors.required">
+        Username is required
+      </div>
+      <div class="mistake" *ngIf="username.errors.minlength">
+        username maximum Length is 15 and minimum Length is
+
+        {{ username.errors.minlength.requiredLength }}
+      </div>
+    </div>
+
+    <label><h4>Password:</h4></label>
+    <input
+      type="password"
+      placeholder="Enter password"
+      name="pass"
+      ngModel
+      #passtype="ngModel"
+      required
+    />
+
+    <div *ngIf="passtype.touched && !passtype.valid">
+      <div class="mistake" *ngIf="passtype.errors.required">
+        Give your password
+      </div>
+    </div>
+
+    <div class="rmnd-me">
+      <input type="checkbox" ngModel name="remember" /> Remember me
+    </div>
+    <div class="l-btn">
+      <button class="lg-btn" type="submit" (click)="submit()">Login</button>
+    </div>
+    <div class="down-form">
+      <div class="rg-nw"><a routerLink="/signup-page">Register Now</a></div>
+      <div class="fg-psw"><a href="/">Forget password?</a></div>
+    </div>
+  </div>
+</form>

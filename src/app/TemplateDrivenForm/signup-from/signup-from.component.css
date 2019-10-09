@@ -1,0 +1,59 @@
+h1 {
+  text-align: center;
+}
+.inside-content {
+  border: 1px solid black;
+  padding: 0 50px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.rmnd-me {
+  margin-top: 10px;
+}
+.l-btn {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.lg-btn {
+  padding: 5px 20px;
+  background: gold;
+  color: black;
+}
+
+.down-form {
+  background: grey;
+  padding: 20px;
+  display: flex;
+  margin-top: 10px;
+}
+.fg-psw {
+  /* background: red;
+    color: black;
+    padding: 10px;
+    border-radius: 10px; */
+  width: 50%;
+}
+
+.rg-nw {
+  /* background: red;
+    color: black;
+    padding: 10px;
+    border-radius: 10px; */
+  width: 50%;
+  /* margin-top: 5px; */
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.username {
+  color: red;
+}
