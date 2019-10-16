@@ -33,7 +33,7 @@ export class SignupFromComponent implements OnInit {
   update() {
     console.log(this.mygroup);
     this.mygroup.patchValue({
-      uname: "mr.",
+      uname: "Mr.Rohan",
       upassword: "1234",
       cpassword: "1234"
     });
